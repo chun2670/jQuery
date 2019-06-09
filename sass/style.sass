@@ -1,0 +1,244 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+ * v2.0 | 20110126
+ * License: none (public domain)
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
+  margin: 0
+  padding: 0
+  border: 0
+  font-size: 100%
+  font: inherit
+  vertical-align: baseline
+
+/* HTML5 display-role reset for older browsers
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display: block
+
+body
+  line-height: 1
+
+ol, ul
+  list-style: none
+
+blockquote, q
+  quotes: none
+
+blockquote
+  &:before, &:after
+    content: ''
+    content: none
+
+q
+  &:before, &:after
+    content: ''
+    content: none
+
+table
+  border-collapse: collapse
+  border-spacing: 0
+  
+  
+  
+// 自訂
+img
+  max-width: 100%
+  height: auto
+a
+  text-decoration: none
+.clearfix
+  clear: both
+h2.title
+  font-size: 24px
+  text-align: center
+  padding-top: 30px
+  padding-bottom: 30px
+  line-height: 1.5em
+  
+*
+  // outline: 1px solid blue
+  -webkit-box-sizing: border-box
+  -moz-box-sizing: border-box
+  box-sizing: border-box
+  font-family: '微軟正黑體'
+  font-size: 16px
+  color: #333333
+  letter-spacing: 1.6px
+
+
+.wrap
+  max-width: 1000px
+  margin: 0 auto
+
+// top 超連結，使用 float
+.top
+  background-color: #F6F6F6
+  padding: 8px
+ul.top__menu
+  float: right
+  li
+    float: left
+    a
+      display: block
+      padding: 0 0.6em
+      img
+        margin-right: 4px
+        vertical-align: middle
+.top__menu__fb
+  border-right: 1px solid #CCCCCC
+  span
+    color: #4460A0
+.top__menu__twitter
+    span
+      color: #23AAEA
+  
+// header logo & menu，使用 float
+header
+  padding: 8px 6px
+  padding-bottom: 0px
+  img
+    padding-left: 10px
+ul.header__list
+  float: right
+  li
+    float: left
+    margin-left: 20px
+    text-align: center
+    &:active
+        border-bottom: 3px solid #0ACE9B
+    a
+      display: block
+      padding: 0.6em
+      color: #07D4A0
+      padding-bottom: 16px
+
+        
+.header__list--active
+  border-bottom: 3px solid #0ACE9B
+
+  
+// banner，使用 position
+.banner
+  background-image: url(../img/banner.png)
+  height: 346px
+  position: relative
+  background-position: right bottom
+  .banner__rect
+    width: 100%
+    background-color: rgba(black,0.2)
+    padding: 30px 16px
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    .banner__h1
+      color: #FFF
+      font-size: 32px
+      line-height: 1.4em
+
+// card，使用 display:inline-block
+.card
+  text-align: center
+  margin: 50px 0
+  line-height: 1.6em
+  display: inline-block
+  width: 100%
+  .card__group
+    display: inline-block
+    vertical-align: top
+    width: 30%
+    min-width: 280px
+    min-height: 390px
+    border: 1px solid rgba(grey,0.1)
+    box-shadow: 0px 2px 1px rgba(grey,0.5)
+    border-radius: 4px
+    margin: 8px
+    padding: 16px
+  .card__group__img
+    height: 10em
+    position: relative
+    img
+      position: absolute
+      top: 50%
+      transform: translate(-50%,-50%)
+  .card__group__title
+    font-size: 20px
+    padding: 10px
+  .card__group__content
+    text-align: justify
+.card__group__content--ul
+  list-style: disc
+  text-align: left
+  padding-left: 26px
+  
+  
+// table
+.table
+  width: 85%
+  margin: 0 auto
+  margin-bottom: 60px
+  tr
+    width: 25%
+.table tr,.table th,.table td
+  border-bottom: 1px solid rgba(grey,0.3)
+  padding: 12px
+  width: 25%
+.table th
+  background-color: #F7F7F7
+  text-align: left
+.table--highlight
+  color: #00A67D
+  
+
+// form，使用 flexbox
+.contact
+  width: 100%
+  height: 405px
+  background-image: url(../img/contact_bg.png)
+  background-repeat: repeat-x
+  .title,label
+    color: #FFF
+  input
+    border-radius: 3px
+    padding: 4px 10px
+    border: none
+.container
+  display: flex
+  display: -webkit-flex
+  .contact__message
+    width: 45%
+    height: 240px
+    margin-left: 30px
+    border-radius: 4px
+    border: none
+  .contact__info
+    flex: 1
+    -webkit-flex: 1
+    margin: 0 30px
+    position: relative
+  input,label
+    width: 95%
+    margin: 8px
+  .contact__submit
+    background-color: #0ACD9B
+    color: #FFF
+    width: 90px
+    padding: 6px
+    position: absolute
+    right: 8px
+    bottom: 0
+    cursor: pointer
+    transition: 0.5s
+    &:hover
+      background-color: #fff
+      color: #0ACD9B
+
+    
+// footer，使用 float
+.footer
+  margin: 30px
+  .footer__info
+    float: right
+    line-height: 1.5em
+    span
+      color: #E12D80
+    
